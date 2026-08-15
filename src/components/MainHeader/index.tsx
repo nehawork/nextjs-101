@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavLinkForMainHeader from './nav-link';
 
 const MainHeader = () => {
   return (
@@ -8,20 +9,7 @@ const MainHeader = () => {
           NextLevel Food
         </h1>
       </Link>
-      <nav className='flex gap-8'>
-        <Link
-          className='text-lg font-medium hover:underline text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600'
-          href='/meals'
-        >
-          Browse Meals
-        </Link>
-        <Link
-          className='text-lg font-medium hover:underline text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600'
-          href='/community'
-        >
-          Foodies Community
-        </Link>
-      </nav>
+      <NavLinkForMainHeader />
     </header>
   );
 };
