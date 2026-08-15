@@ -1,10 +1,13 @@
+import ImageSlideshow from '@/components/ImagesSlideShow';
 import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.homePageWrapper}>
-      <div className={styles.slideshow}>Hello</div>
+      <div className={styles.slideshow}>
+        <ImageSlideshow />
+      </div>
       <div className={styles.homePageHeader}>
         <div className={styles.homePageHeaderContent}>
           <h1 className={styles.homePageTitle}>
