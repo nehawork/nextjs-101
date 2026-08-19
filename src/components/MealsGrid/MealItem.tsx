@@ -6,7 +6,7 @@ import styles from './meals-grid.module.css';
 const MealItem = ({ title, slug, image, summary, creator }: MealType) => {
   return (
     <article className={styles.mealItem}>
-      <Image src={image} alt={title} width={200} height={150} />
+      <Image src={image} alt={title} width={200} height={200} />
       <div className={styles.content}>
         <div className={styles.headerText}>
           <h2>{title}</h2>
