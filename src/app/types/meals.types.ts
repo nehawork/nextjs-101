@@ -15,3 +15,12 @@ export type MealDetailsType = {
   creator_email: string;
   instructions: string;
 };
+
+export type AddMealRequestWithImageFile = {
+  title: string;
+  image: File;
+  summary: string;
+  creator: string;
+  creator_email: string;
+  instructions: string;
+};
