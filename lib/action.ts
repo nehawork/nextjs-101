@@ -1,6 +1,7 @@
 'use server';
 
 import type { AddMealRequestWithImageFile } from '@/app/types/meals.types';
+import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { saveMeal } from './meals';
 
@@ -56,5 +57,6 @@ export async function shareMeal(
     };
   }
 
+  revalidatePath('/meals');
   redirect('/meals');
 }
