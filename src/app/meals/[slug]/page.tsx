@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getMeal } from '../../../../lib/meals';
 import styles from './page.module.css';
@@ -41,7 +42,9 @@ export default async function MealDetailsPage({
     <>
       <header className={styles.header}>
         <div className={styles.image}>
-          <Image fill src={meal.image} alt={meal.title} />
+          <Link href={`/meals/${slug}/image`}>
+            <Image fill src={meal.image} alt={meal.title} />
+          </Link>
         </div>
         <div className={styles.headerText}>
           <h1>{meal.title}</h1>
